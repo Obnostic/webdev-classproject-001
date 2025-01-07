@@ -1,42 +1,45 @@
 @import url("./css/reset.css");
 
 html {
-	padding: 0;
+	padding: 20;
 	margin: 0;
 }
 
 body {
 	color: #333333;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	line-height: 1.6;
-/*	background-color: #f9f9f9; */
-	background-image: radial-gradient(farthest-corner at 40% 10%, rgb(209, 75, 97), rgb(0, 1, 74), black);
+	background-image: radial-gradient(farthest-corner at 50% 10%, rgb(209, 75, 97), rgb(0, 1, 74), black);
 	background-repeat: no-repeat;
 }
 
-h1,
+h1 {
+	color: antiquewhite;
+	font-style: italic;
+	font-size: 12px;
+	line-height: 1.6;
+	margin: 0rem 2rem 1.6rem; 
+}
+
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
 	font-size: 100px;
 	color: antiquewhite;
-	line-height: 4;
-	margin: 0 0 1.6rem;
+	line-height: 4; 
+	margin: 0 2rem 1.6rem; 
 }
 
 p {
-	font-family: Arial, Helvetica, sans-serif;
 	color: antiquewhite;
 	line-height: 1.6;
 	margin: 0 0 1.6rem;
 }
 
-a {
+/* a {
 	color: #0056b3;
 	border-bottom: 2px solid transparent;
 	transition: all 0.5s ease-in-out;
@@ -51,55 +54,59 @@ hr {
 	margin: 3.2rem 1.6rem;
 	color: #555555;
 	border-color: #555555;
-}
+} */
 
 /* Layout */
 
 .container__master {
 	display: flex;
-	justify-content: center;
-	align-items: center; 
 	padding: 40px;
-	margin: 0 auto;
+	width: 90%
 }
 
 .container__sub {
 	display: flex;
-	padding: 10;
 	border: 1px solid white;
-	margin: 30,30,30,30;
-	width: 100%;
-	max-width: 1000px
-	height=1000px;
+	align-items: center;
 }
 
-.quoteContain {
-	padding: 10;
-	margin: 3 auto;
-	width: 100%;
-	max-width: 80%
-	min-height: 100%;
+.quoteContainL {
+	display: flex;
+	justify-content: right;
+	width: 6rem;
+	align-items: top; 
 }
 
 .textContain {
-	padding: 10;
-	margin: 3 auto;
-	width: 100%;
-	max-width: 80%
-	min-height: 100%;
+ 	display: flex;
+    align-items: center;
+	width: 18rem;
+	height: 18rem;
+	text-align: center;
+}
+
+
+.quoteContainR {
+	display: flex;
+	width: 6rem;
+ 	justify-content: left; 
+	align-items: bottom; 
 }
 
 /* Media Queries */
 
 @media (min-width: 699px) {
 
-	/* CSS HERE */
-
+	.container__sub {
+		flex-direction: row;
+	}
 }
 
 /* Desktop Media Query */
 @media (min-width: 999px) {
 
-	/* CSS HERE */
+	.container__sub {
+		flex-direction: row;
+	}
 
 }
