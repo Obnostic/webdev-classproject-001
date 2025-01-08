@@ -1,23 +1,22 @@
 @import url("./css/reset.css");
 
-html {
+/* html {
 	padding: 20;
 	margin: 0;
-}
+} */
 
 body {
-	color: #333333;
+/*	color: #333333; */
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: radial-gradient(farthest-corner at 50% 10%, rgb(209, 75, 97), rgb(0, 1, 74), black);
 	background-repeat: no-repeat;
 }
 
-h1 {
+h1 {							/* for the BRUCE LEE attribution */
 	color: antiquewhite;
 	font-style: italic;
 	font-size: 12px;
 	line-height: 1.6;
-	margin: 0rem 2rem 1.6rem; 
 }
 
 
@@ -25,70 +24,55 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 {							/* for the GIANT QUOTE MARKS on either side of the text */
 	font-weight: bold;
 	font-size: 100px;
 	color: antiquewhite;
-	line-height: 4; 
-	margin: 0 2rem 1.6rem; 
+/*	line-height: 4; 
+	margin: 0 2rem 1.6rem;  */
 }
 
-p {
+p {						     	/* for the QUOTE text */
 	color: antiquewhite;
-	line-height: 1.6;
-	margin: 0 0 1.6rem;
+	font-size: x-large;
+	line-height: 1.4; 
 }
 
-/* a {
-	color: #0056b3;
-	border-bottom: 2px solid transparent;
-	transition: all 0.5s ease-in-out;
-}
-
-a:hover {
-	color: #002348;
-	border-bottom: 2px solid #002348;
-}
-
-hr {
-	margin: 3.2rem 1.6rem;
-	color: #555555;
-	border-color: #555555;
-} */
 
 /* Layout */
 
 .container__master {
-	display: flex;
-	padding: 40px;
+/*	display: flex; */
+	padding: 1.5rem;
 	width: 90%
 }
 
 .container__sub {
 	display: flex;
+	flex-direction: row;
 	border: 1px solid white;
-	align-items: center;
+	align-items: center; 
 }
 
 .quoteContainL {
-	display: flex;
+	width: 7rem;
 	justify-content: right;
-	width: 6rem;
 	align-items: top; 
 }
 
 .textContain {
  	display: flex;
-    align-items: center;
-	width: 18rem;
-	height: 18rem;
+	flex-direction: column;
+/*    align-items: center;  */
+	width: 19rem;
+	height: 5rem;
 	text-align: center;
+	padding: 2rem
 }
 
 
 .quoteContainR {
-	display: flex;
-	width: 6rem;
+	width: 7rem;
  	justify-content: left; 
 	align-items: bottom; 
 }
@@ -97,16 +81,12 @@ hr {
 
 @media (min-width: 699px) {
 
-	.container__sub {
-		flex-direction: row;
-	}
+
+
 }
 
 /* Desktop Media Query */
 @media (min-width: 999px) {
 
-	.container__sub {
-		flex-direction: row;
-	}
 
 }
