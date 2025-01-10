@@ -1,14 +1,10 @@
 @import url("./css/reset.css");
+@import url("./css/utility.css");
 
-/* html {
-	padding: 20;
-	margin: 0;
-} */
 
 body {
-/*	color: #333333; */
 	font-family: Arial, Helvetica, sans-serif;
-	background-image: radial-gradient(farthest-corner at 50% 10%, rgb(209, 75, 97), rgb(0, 1, 74), black);
+	background-image: radial-gradient(farthest-corner at 40% 5%, rgb(198, 55, 131), rgb(0, 25, 63), black);
 	background-repeat: no-repeat;
 }
 
@@ -16,7 +12,6 @@ h1 {							/* for the BRUCE LEE attribution */
 	color: antiquewhite;
 	font-style: italic;
 	font-size: 12px;
-	line-height: 1.6;
 }
 
 
@@ -24,69 +19,73 @@ h2,
 h3,
 h4,
 h5,
-h6 {							/* for the GIANT QUOTE MARKS on either side of the text */
-	font-weight: bold;
-	font-size: 100px;
+h6::first-letter {
+	font-family: Georgia, 'Times New Roman', Times, serif;				/* for the GIANT QUOTE MARKS on either side of the text */
+	font-size: 100pt;
 	color: antiquewhite;
-/*	line-height: 4; 
-	margin: 0 2rem 1.6rem;  */
-}
+} 
 
 p {						     	/* for the QUOTE text */
 	color: antiquewhite;
 	font-size: x-large;
-	line-height: 1.4; 
+	line-height: 1.4;  
 }
 
 
 /* Layout */
 
 .container__master {
-/*	display: flex; */
+	display: flex; 
 	padding: 1.5rem;
-	width: 90%
+	height: 20rem; 
 }
 
 .container__sub {
 	display: flex;
-	flex-direction: row;
+	height: 20rem; 
 	border: 1px solid white;
-	align-items: center; 
+	padding: 0;
 }
 
 .quoteContainL {
-	width: 7rem;
-	justify-content: right;
-	align-items: top; 
+	display: flex;
+	width: 5rem;
+	height: 20rem; 
+	justify-content: right;	 
+	align-items: flex-start;
 }
 
 .textContain {
  	display: flex;
 	flex-direction: column;
-/*    align-items: center;  */
 	width: 19rem;
-	height: 5rem;
+	height: 20rem; 
+	justify-content: center;
 	text-align: center;
-	padding: 2rem
 }
 
 
 .quoteContainR {
-	width: 7rem;
+	display: flex;
+	width: 5rem;
+	height: 20rem; 
  	justify-content: left; 
-	align-items: bottom; 
+	align-items: flex-end;
 }
 
 /* Media Queries */
 
 @media (min-width: 699px) {
-
-
+	.container__master {
+		width: 70%
+	}
 
 }
 
 /* Desktop Media Query */
 @media (min-width: 999px) {
-
+	.container__master {
+		width: 90%
+	}
 
 }
